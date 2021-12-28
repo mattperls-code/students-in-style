@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Students In Style</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Students In <div style="display: inline; text-decoration: underline; text-decoration-color: white;">Style</div></h1>
+            <div class="instructions">Change styles as you like and refresh to see them real time</div>
+        </header>
+        <main>
+            <section>
+                <h2>Set Your Profile Picture</h2>
+                <input id="pfpInput" type="text" placeholder="URL Of New Profile Picture" />
+            </section>
+            <section>
+                <h2>Set Your Display Name</h2>
+                <input id="nameInput" type="text" placeholder="New Display Name" />
+            </section>
+            <section>
+                <h2 id="colorPickerLabel">Set Flair Color</h2>
+                <canvas id="colorPicker" width="340" height="40"></canvas>
+                <button id="resetColor">Reset</button>
+            </section>
+        </main>
+        <footer>
+            <div class="footerContent">Style brought to you by <i>Matthew Perlman</i> and <i>Rafayel Amirkhanyan</i></div>
+        </footer>
+        <script src="index.js"></script>
+    </body>
+</html>
