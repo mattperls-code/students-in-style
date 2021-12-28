@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/StudentsInStyle/static/css/main.9a5ba993.css",
-    "main.js": "/StudentsInStyle/static/js/main.1935c2dc.js",
+    "main.js": "/StudentsInStyle/static/js/main.fd23d677.js",
     "static/media/Roboto-Regular.ttf": "/StudentsInStyle/static/media/Roboto-Regular.03523cf578d69fa92322.ttf",
     "static/media/Quicksand-VariableFont_wght.ttf": "/StudentsInStyle/static/media/Quicksand-VariableFont_wght.92e1d0f3321b53e20d2b.ttf",
     "index.html": "/StudentsInStyle/index.html",
     "main.9a5ba993.css.map": "/StudentsInStyle/static/css/main.9a5ba993.css.map",
-    "main.1935c2dc.js.map": "/StudentsInStyle/static/js/main.1935c2dc.js.map"
+    "main.fd23d677.js.map": "/StudentsInStyle/static/js/main.fd23d677.js.map"
   },
   "entrypoints": [
     "static/css/main.9a5ba993.css",
-    "static/js/main.1935c2dc.js"
+    "static/js/main.fd23d677.js"
   ]
 }

@@ -104,7 +104,11 @@ const AdminPanel = () => {
                 </div>
             </section>
             <section style={{ backgroundColor: "black" }}>
-                <h3>Logout Of Admin Account</h3>
+                <h3>
+                    {
+                        `Logout of ${JSON.parse(localStorage.getItem("sis-auth")).username}`
+                    }
+                </h3>
                 <div style={{ backgroundColor: "rgb(30, 30, 30)" }} className={"submitButtonContainer"} onClick={() => {
                     localStorage.removeItem("sis-auth")
                     window.location.hash = "#/"
