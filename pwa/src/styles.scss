@@ -1,0 +1,139 @@
+@font-face {
+    font-family: Roboto;
+    src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url("./assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+
+    .pageContainer {
+        h1 {
+            padding: 30px 20px;
+            background-color: rgb(0, 0, 0);
+            font-family: Quicksand;
+            font-size: 36px;
+            color: rgb(220, 220, 220);
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: white;
+        }
+
+        h2 {
+            padding: 10px;
+            padding-top: 0;
+            background-color: rgb(0, 0, 0);
+            font-family: Quicksand;
+            font-size: 22px;
+            color: rgb(200, 200, 200);
+            text-align: center;
+        }
+
+        section {
+            padding: 30px 15px;
+            text-align: center;
+
+            h3 {
+                font-family: Roboto;
+                font-size: 22px;
+                color: rgb(220, 220, 220);
+            }
+
+            input {
+                width: calc(100% - 40px);
+                height: 40px;
+                padding: 6px 10px;
+                border-radius: 15px;
+                margin-bottom: 14px;
+                font-size: 18px;
+            }
+
+            input:first-of-type {
+                margin-top: 40px;
+            }
+
+            input::placeholder {
+                text-align: center;
+                color: rgb(80, 80, 80);
+            }
+
+            .submitButtonContainer {
+                display: flex;
+                width: 220px;
+                height: 70px;
+                border-radius: 20px;
+                margin: auto;
+                margin-top: 20px;
+                background-color: rgb(0, 0, 0);
+                align-items: center;
+                justify-content: center;
+            }
+
+            .submitButtonText {
+                display: flexbox;
+                font-family: Roboto;
+                font-size: 22px;
+                color: rgb(220, 220, 220);
+            }
+
+            .altAuthOption {
+                margin-top: 20px;
+                font-family: Roboto;
+                font-size: 18px;
+                color: rgb(200, 200, 200);
+                text-decoration: underline;
+                text-decoration-color: rgb(220, 220, 220);
+            }
+
+            .activeLogoImage {
+                width: 300px;
+                margin-top: 20px;
+            }
+
+            .allLogosContainer {
+                display: flex;
+                height: 340px;
+                margin-top: 20px;
+                overflow-y: hidden;
+                overflow-x: scroll;
+                flex-direction: row;
+                flex-wrap: nowrap;
+
+                .logoImageContainer {
+                    display: flexbox;
+                    margin-left: 20px;
+                    padding: 20px;
+                    height: 300px;
+                }
+            }
+
+            .allLogosContainer::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        .failedAuth {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            color: rgb(233, 130, 130);
+            font-family: Roboto;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+
+    .pageContainer::-webkit-scrollbar {
+        display: none;
+    }
+}
