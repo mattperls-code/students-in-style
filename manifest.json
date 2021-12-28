@@ -1,0 +1,23 @@
+{
+    "short_name": "SIS Admin",
+    "name": "Students In Style Admin Control Panel",
+    "description": "Admin Control Panel For Students In Style Chrome Extension",
+    "icons": [
+        {
+            "src": "./favicon/logo_192x192.png",
+            "sizes": "192x129",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "./favicon/logo_512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "start_url": "/StudentsInStyle",
+    "display": "standalone",
+    "theme_color": "rgb(220, 220, 220)",
+    "background_color": "rgb(30, 30, 30)"
+}
