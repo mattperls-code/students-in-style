@@ -2,6 +2,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.message == "sis-urlchange") {
         if (window.location.href.startsWith("https://philasd.infinitecampus.org/campus/nav-wrapper/student/portal/student/")) {
             console.log("you been haczd")
+
+            const url = "https://logo-api-i9jpe.ondigitalocean.app"
+            const response = fetch(url).then(res => res.json()).then(res => res.data).catch(err => console.log(err))
+            console.log(response)
+
             try {
                 // logo changer 
 
@@ -15,17 +20,17 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                     width: "100%",
                     height: "100%",
                 }
+
                 logoContainer.appendChild(document.createElement("img", {
-                    src: await fetchLogoURL(),
+                    src: fetchLogoURL(),
                     alt: "logo",
                     style: Object.entries(styling).map(([k, v]) => `${k}:${v}`).join(';'),
                 }))
 
-                const fetchLogoURL = async () => {
+                const fetchLogoURL = () => {
                     const url = "https://logo-api-i9jpe.ondigitalocean.app"
-                    const response = await fetch(url);
-                    const data = await response.text();
-                    return data;
+                    const response = fetch(url).then(res => res.json()).then(res => res.data).finally(res => res.text()).catch(err => console.log(err))
+                    return response
                 }
 
 
