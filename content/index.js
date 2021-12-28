@@ -1,38 +1,29 @@
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+let sentMessage1 = false
+let sentMessage2 = false
+let sentMessage3 = false
+
+chrome.runtime.onMessage.addListener((request) => {
     if (request.message == "sis-urlchange") {
         if (window.location.href.startsWith("https://philasd.infinitecampus.org/campus/nav-wrapper/student/portal/student/")) {
-            console.log("you been haczd")
-
-            const url = "https://logo-api-i9jpe.ondigitalocean.app"
-            const response = fetch(url).then(res => res.json()).then(res => res.data).catch(err => console.log(err))
-            console.log(response)
-
+            if(!sentMessage1){
+                console.log("%cYou been haczd", "font-size: 24px; color: rgb(220, 220, 220); margin-top: 12px; margin-bottom: 8px;")
+                console.log("%cJK, have fun with the new styles", "font-size: 16px; color: rgb(200, 200, 200); margin-top: 8px; margin-bottom: 24px;")
+                sentMessage1 = true
+            }
             try {
-                // logo changer 
-
                 const logoContainer = document.querySelector('.header__logo');
-
-                // TODO ! Matt Plz make CSS work pls thx
-                const styling = {
-                    position: "absolute",
-                    top: "0",
-                    right: "100",
-                    width: "100%",
-                    height: "100%",
+                if(logoContainer == null){
+                    throw new Error("doesnt exist yet")
                 }
-
-                logoContainer.appendChild(document.createElement("img", {
-                    src: fetchLogoURL(),
-                    alt: "logo",
-                    style: Object.entries(styling).map(([k, v]) => `${k}:${v}`).join(';'),
-                }))
-
-                const fetchLogoURL = () => {
-                    const url = "https://logo-api-i9jpe.ondigitalocean.app"
-                    const response = fetch(url).then(res => res.json()).then(res => res.data).finally(res => res.text()).catch(err => console.log(err))
-                    return response
-                }
-
+                const url = "https://logo-api-i9jpe.ondigitalocean.app"
+                fetch(url).then(res => res.json()).then(res => {
+                    const logoSrc = res.data
+                    const sisLogo = document.createElement("img")
+                    sisLogo.src = logoSrc
+                    sisLogo.alt = "Students In Style",
+                    sisLogo.className = "sisLogo"
+                    logoContainer.appendChild(sisLogo)
+                })
 
                 const headerElement = document.querySelector(".header")
                 const sideBarHeader = document.querySelector(".sidebar__header")
@@ -54,7 +45,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                     }
                 })
             } catch (e) {
-                console.log("just give it a minute")
+                if(!sentMessage2){
+                    console.log("just give it a minute")
+                    sentMessage2 = true
+                }
             }
         }
         if (window.location.href == "https://philasd.infinitecampus.org/campus/nav-wrapper/student/portal/student/today") {
@@ -75,7 +69,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                         }
                     })
                 } catch (e) {
-                    console.log("try getting some wifi bruh")
+                    if(!sentMessage3){
+                        console.log("try getting some wifi bruh")
+                        sentMessage3 = true
+                    }
                     successful = false
                 }
                 callback(successful)
