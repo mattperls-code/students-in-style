@@ -16,7 +16,8 @@
         "matches": [
             "<all_urls>"
         ],
-        "js": ["content/index.js"]
+        "js": ["content/index.js"],
+        "css": ["content/styles.css"]
     }],
     "background": {
         "service_worker": "background/index.js"
