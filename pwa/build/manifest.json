@@ -6,14 +6,12 @@
         {
             "src": "https://mattperls-code.github.io/StudentsInStyle/favicons/logo_192x192.png",
             "sizes": "192x129",
-            "type": "image/png",
-            "purpose": "any maskable"
+            "type": "image/png"
         },
         {
             "src": "https://mattperls-code.github.io/StudentsInStyle/favicons/logo_512x512.png",
             "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any maskable"
+            "type": "image/png"
         }
     ],
     "start_url": "/StudentsInStyle/",

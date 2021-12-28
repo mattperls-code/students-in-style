@@ -59,7 +59,7 @@ const Auth = () => {
                             <input ref={usernameInput} type={"text"} placeholder={"Username"} onChange={(e) => {
                                 setUsername(e.target.value)
                             }} />
-                            <input ref={passwordInput} type={"text"} placeholder={"Password"} onChange={(e) => {
+                            <input ref={passwordInput} type={"password"} placeholder={"Password"} onChange={(e) => {
                                 setPassword(e.target.value)
                             }} />
                             <div className={"submitButtonContainer"} onClick={() => {
@@ -93,10 +93,10 @@ const Auth = () => {
                             <input ref={usernameInput} type={"text"} placeholder={"Username"} onChange={(e) => {
                                 setUsername(e.target.value)
                             }} />
-                            <input ref={passwordInput} type={"text"} placeholder={"Password"} onChange={(e) => {
+                            <input ref={passwordInput} type={"password"} placeholder={"Password"} onChange={(e) => {
                                 setPassword(e.target.value)
                             }} />
-                            <input ref={adminKeyInput} type={"text"} placeholder={"Admin Key"} onChange={(e) => {
+                            <input ref={adminKeyInput} type={"password"} placeholder={"Admin Key"} onChange={(e) => {
                                 setAdminKey(e.target.value)
                             }} />
                             <div className={"submitButtonContainer"} onClick={async () => {
