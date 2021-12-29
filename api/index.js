@@ -97,7 +97,7 @@ app.post("/auth/create/:secret", signup, async (req, res) => {
   try {
     const users = require("./users.json")
     const hashedPassword = await bcrypt.hash(password, 10)
-    console.log(password)
+ 
 
     const user = {
       username: username,
