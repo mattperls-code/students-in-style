@@ -173,8 +173,7 @@ chrome.runtime.onMessage.addListener((request) => {
             iframeElement.contentDocument.querySelector(".contentSpace");
           const widgetContainer = contentSpace.children[0][0];
 
-          const covidWidget =
-            iframeElement.contentDocument.createElement("div");
+          const covidWidget = document.createElement("div");
           covidWidget.innerHTML = constants.covidHtml;
           widgetContainer.appendChild(covidWidget);
         } catch (e) {
